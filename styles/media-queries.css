@@ -1,83 +1,25 @@
-@charset "UTF-8";
+@media screen and (min-width: 768px) and (max-width: 992px){
+  body{ background-image: linear-gradient(to top, #62854A, #DB8958); }
 
-/* 
-Device breakpoints:
+  section#login{
+    width: 80vw;
+    height: 520px;
+  }
 
-Extra small devices (phones, 600px and down)
-
-Small devices (portrait tablets and large phones, 600px and up)
-
-Medium devices (landscape tablets, 768px and up)
-
-Large devices (laptops/desktops, 992px and up) 
-
-Extra large devices (large laptops and desktops, 1200px and up) 
-*/
-
-@media screen and (max-width: 768px) 
-{
-    div#form > p {
-        font-size: 1em;
-    }
-
-    div#form {
-        font-size: 0.6em;
-    }
+  #image{ float:left; width:30%; height:100%; }
+  #form{  float:right; width:70%; padding:20px; }
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) 
-{
+@media screen and (min-width: 992px){
+  body{ background-image: linear-gradient(to top, #62854A, #DB8958); }
 
-    body 
-    {
-        background-image: linear-gradient(to top, #62854A, #DB8958);
-    }
+  section#login{
+    width: 980px;
+    height: 520px;
+  }
 
-    section#login 
-    {
-        width: 80vw;
+  #image{ float:right; width:40%; height:100%; }
+  #form{  float:left;  width:60%; padding:22px; }
 
-    }
-
-    section#login > div#image 
-    {
-        float: left;
-        width: 30%;
-        height: 100%;
-    }
-
-    section#login > div#form 
-    {
-        float: right;
-        width: 70%;
-    }
+  #form p{ font-size:1.05rem; line-height:1.45; }
 }
-
-@media screen and (min-width: 992px) 
-{
-    body 
-    {
-        background-image: linear-gradient(to top, #62854A, #DB8958);
-    }
-    section#login 
-    {
-        width: 990px;
-    }
-
-    section#login > div#image 
-    {
-        float: right;
-        width: 40%;
-        height: 100%;
-    }
-
-    section#login > div#form 
-    {
-        float: left;
-        width: 60%;
-    }
-
-    div#form > p {
-    font-size: 1.2em;
-}
-}   

@@ -1,75 +1,118 @@
 @charset "UTF-8";
 
-/*
-
-Colors pallete:
-#62854A Fern green
-#DB8958 Persian orange
-#D8E2DC Platinum
-#ffffff White
-
-*/
-
-* 
+:root
 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+    --platinum:#D8E2DC;
+    --green:#62854A; --darkgreen:#476136;
+    --orange:#DB8958; --darkorange:#af6d46;
+    --card:#fff; --ink:#111; --muted:#5b6770;
 }
 
-body, html 
-{
-    background-color: #D8E2DC;
-    height: 100vh;
-    width: 100vw;
+*
+{ 
+    box-sizing:border-box; margin:0; padding:0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+
+html,body
+{ 
+    width:100vw; height:100vh; background:var(--platinum); 
 }
 
 main
-{
-    position: relative;
-    height: 100vh;
-    width: 100vw;
+{ 
+    position:relative; width:100vw; height:100vh; 
 }
 
-section#login 
+section#login
 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    background-color:  #ffffff;
-    width: 300px;
-    height: 500px;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 3px 3px 3px #0000003b;
-
-    transition: width .3s, height .3s;
-    transition-timing-function: ease;
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    width: min(92vw, 320px);       
+    height: 520px;               
+    background:var(--card);
+    border-radius:20px; overflow:hidden;
+    box-shadow:3px 3px 3px #0000003b;
+    transition: width .3s ease, height .3s ease;
 }
 
-section#login > div#image 
+#image
+{
+    background: #fff url(../images/pexels-sofia-fraire-693254-31038107.jpg) center/cover no-repeat;
+    height: 32%;
+}
+
+#form
+{
+     padding: 16px; color:var(--ink); 
+}
+
+#form h1
+{ 
+    text-align:center; margin: 2px 0 10px; 
+}
+
+#form p
+{ 
+    color:var(--muted); line-height:1.35; margin-bottom:10px; 
+}
+
+.field
+{
+    position: relative;             
+    background: var(--platinum);
+    border-radius: 6px;
+    padding: 6px 8px 6px 44px;      
+    margin: 8px 0;
+
+}
+
+.field > .material-symbols-outlined
+{
+    position: absolute; left: 10px; top: 50%; transform: translateY(-50%);
+    font-size: 22px; color: #ffffff; opacity:.9;
+    width: 22px; height: 22px; text-align:center;
+}
+
+.field > input
 {
     display: block;
-    background: #ffffff url(../images/pexels-sofia-fraire-693254-31038107.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 30%;
+    width: 100%;
+    font-size: 1rem;                
+    line-height: 1.2;
+    color: var(--ink);
+    background: #fff;
+    border: 2px solid var(--platinum);
+    border-radius: 6px;
+    height: 42px;                   
+    padding: 0 10px;                
 }
 
-section#login > div#form 
+.field > input:focus
 {
-    display: block;
-    padding: 15px;
+    outline: none;
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(98,133,74,.25);
 }
 
-div#form > h1 {
-    text-align: center;
-    margin-bottom: 10px;
+input[type=submit]
+{
+    display:block; width:100%; height: 38px; margin-top: 10px;
+    border:0; border-radius:6px; color:#fff; background:var(--green);
+    font-weight:600; cursor:pointer;
+}
+input[type=submit]:hover
+{ 
+    background:var(--darkgreen); 
 }
 
-div#form > p {
-    font-size: 0.8em;
+a.button
+{
+    display:block; text-align:center; text-decoration:none;
+    width:100%; height:38px; margin-top:10px; line-height:38px;
+    color:#fff; background:var(--orange); border-radius:6px;
 }
+a.button:hover
+{
+    background:var(--darkorange); 
+}
+a.button .material-symbols-outlined{ font-size:18px; vertical-align: -3px; }

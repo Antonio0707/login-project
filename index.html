@@ -1,56 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/media-queries.css">
-    <style>
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/media-queries.css">
+
+  <style>
+    .material-symbols-outlined{
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal; font-style: normal;
+      font-size: 24px; line-height: 1;
+      display: inline-block; white-space: nowrap;
+      -webkit-font-feature-settings:'liga';
+      -webkit-font-smoothing: antialiased;
+      font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;
+    }
+  </style>
 </head>
 <body>
-    <main>
-        <section id="login">
-            <div id="image">
-                <!-- The image will be displayed here via CSS-->
-            </div>
-            <div id="form">
-                <h1>Login</h1>
-                <p>
-                    Welcome back. Log in to access your account and configure your environment.
-                </p>
-                <form action="login.php" method="post" autocomplete="on">
-                    <div class="field">
-                        <span class="material-symbols-outlined">person</span>                       
-                        <input type="email" name="login" id="ilogin" required placeholder="Your e-mail" autocomplete="email">
-                        <label for="ilogin">
-                            Login
-                        </label>
-                    </div>
-                    <div class="field"> 
-                        <span class="material-symbols-outlined">key</span>                      
-                        <input type="password" name="password" id="ipassword" required placeholder="Your Password" minlength="8" maxlength="16" autocomplete="current-password">
-                        <label for="ipassword">
-                            Password
-                        </label>
-                    </div>
-                    <input type="submit" value="Login">
-                    <a href="esqueci.html">
-                        Forgot the password. <span class="material-symbols-outlined">mail</span>
-                    </a>
+  <main>
+    <section id="login">
+      <div id="image"><!-- bg via CSS --></div>
+      <div id="form">
+        <h1>Login</h1>
+        <p>Welcome back. Log in to access your account and configure your environment.</p>
 
-                </form>
-            </div>
-        </section>
-    </main>
+        <form action="login.php" method="post" autocomplete="on">
+          <div class="field">
+            <span class="material-symbols-outlined" aria-hidden="true">person</span>
+            <input type="email" id="ilogin" name="login" placeholder="Your e-mail" required autocomplete="email">
+          </div>
+
+          <div class="field">
+            <span class="material-symbols-outlined" aria-hidden="true">key</span>
+            <input type="password" id="ipassword" name="password" placeholder="Your Password" minlength="8" maxlength="16" required autocomplete="current-password">
+          </div>
+
+          <input type="submit" value="Login">
+
+          <a href="iforgot.html" class="button">
+            Forgot the password <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+          </a>
+        </form>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
