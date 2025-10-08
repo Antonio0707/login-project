@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/media-queries.css">
+    <style>
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+</style>
 </head>
 <body>
     <main>
@@ -18,7 +28,27 @@
                 <p>
                     Welcome back. Log in to access your account and configure your environment.
                 </p>
-                <form action="register.php" method="post"></form>
+                <form action="login.php" method="post" autocomplete="on">
+                    <div class="field">
+                        <span class="material-symbols-outlined">person</span>                       
+                        <input type="email" name="login" id="ilogin" required placeholder="Your e-mail" autocomplete="email">
+                        <label for="ilogin">
+                            Login
+                        </label>
+                    </div>
+                    <div class="field"> 
+                        <span class="material-symbols-outlined">key</span>                      
+                        <input type="password" name="password" id="ipassword" required placeholder="Your Password" minlength="8" maxlength="16" autocomplete="current-password">
+                        <label for="ipassword">
+                            Password
+                        </label>
+                    </div>
+                    <input type="submit" value="Login">
+                    <a href="esqueci.html">
+                        Forgot the password. <span class="material-symbols-outlined">mail</span>
+                    </a>
+
+                </form>
             </div>
         </section>
     </main>

@@ -40,7 +40,7 @@ section#login
     transform: translate(-50%, -50%);
 
     background-color:  #ffffff;
-    width: 250px;
+    width: 300px;
     height: 500px;
     border-radius: 20px;
     overflow: hidden;
@@ -63,4 +63,13 @@ section#login > div#form
 {
     display: block;
     padding: 15px;
+}
+
+div#form > h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div#form > p {
+    font-size: 0.8em;
 }
